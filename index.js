@@ -8,7 +8,9 @@ async function fetchBeer() {
   console.log(randomBeer);
 }
 let btnRandom = document.querySelector(".btn-random");
+let randomBeer = document.querySelector(".random-beer-wrapper");
 btnRandom.addEventListener("click", function () {
   console.log("click");
+  randomBeer.innerHTML = "hej";
 });
 fetchBeer();
