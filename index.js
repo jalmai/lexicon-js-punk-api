@@ -11,9 +11,9 @@ async function fetchBeer() {
   let html = randomBeer.beerHtmlCard();
   randomBeerWrapper.innerHTML = "";
   randomBeerWrapper.insertAdjacentHTML("afterbegin", html);
-  btnRandom.addEventListener("click", function () {
-    console.log("click");
-    fetchBeer();
-  });
 }
 fetchBeer();
+btnRandom.addEventListener("click", function () {
+  console.log("click");
+  fetchBeer();
+});
