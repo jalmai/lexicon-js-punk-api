@@ -22,4 +22,11 @@ class Beer {
     this.brewers_tips = data.brewers_tips;
     this.contributed_by = data.contributed_by;
   }
+  beerHtmlCard() {
+    return `<div class="card">
+            <img src="${this.image_url}" />
+            <h2>${this.name}</h2>
+            <p>See more</p>
+          </div>`;
+  }
 }

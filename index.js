@@ -8,19 +8,12 @@ async function fetchBeer() {
   const data = await response.json();
   console.log(data);
   let randomBeer = new Beer(data[0]);
-  console.log(randomBeer);
+  let html = randomBeer.beerHtmlCard();
+  randomBeerWrapper.innerHTML = "";
+  randomBeerWrapper.insertAdjacentHTML("afterbegin", html);
   btnRandom.addEventListener("click", function () {
-    // TODO: Click should set a new random beer and then send it to DOM
     console.log("click");
-    // TODO: Move to separate class
-    let html = `<div class="card">
-            <img src="${randomBeer.image_url}" />
-            <h2>${randomBeer.name}</h2>
-            <p>See more</p>
-          </div>`;
-    randomBeerWrapper.innerHTML = "";
-    randomBeerWrapper.insertAdjacentHTML("afterbegin", html);
+    fetchBeer();
   });
 }
-
 fetchBeer();
