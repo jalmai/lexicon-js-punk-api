@@ -1,7 +1,40 @@
+:root {
+  --card-img-max-width: 300px;
+  --card-img-max-height: 500px;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
 .card {
-  width: 200px;
-  min-height: 400px;
   border: 2px solid black;
   padding: 20px;
-  margin: 0px;
+  margin: 0 auto;
+  background-color: violet;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.random-beer {
+  container-type: inline-size;
+  max-height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-self: center;
+}
+
+.random-beer .card img {
+  max-height: 50vh;
+  justify-self: center;
+}
+@container (max-width: 500px) {
+  .card {
+    /* Temporary to see clearly when container rule apply */
+    background-color: red;
+  }
+  .random-beer .card img {
+    height: 80cqw;
+    max-width: 80cqw;
+  }
 }
