@@ -24,8 +24,13 @@ class Beer {
   }
   beerHtmlCard() {
     // TODO: If no image, insert placeholder
+    console.log(this.image_url);
+    let url = "https://picsum.photos/200/200";
+    if (this.image_url) {
+      url = this.image_url;
+    }
     return `<div class="card">
-            <img src="${this.image_url}" />
+            <img src="${url}" />
             <h2>${this.name}</h2>
             <p>See more</p>
           </div>`;
