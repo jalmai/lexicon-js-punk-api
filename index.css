@@ -26,19 +26,8 @@ body {
 }
 
 .random-beer .card img {
-  max-height: 50vh;
+  max-height: 30vh;
   justify-self: center;
-}
-@container (max-width: 500px) {
-  .card {
-    /* Temporary to see clearly when container rule apply */
-    background-color: red;
-  }
-  .random-beer .card img {
-    max-height: 70cqh;
-    max-width: 90cqw;
-    height: auto;
-  }
 }
 /* CSS */
 .button-92 {
@@ -76,4 +65,21 @@ body {
   margin: 0;
   cursor: pointer;
   padding: 0.1em 0.3em;
+}
+@container (max-width: 500px) {
+  .card {
+    /* Temporary to see clearly when container rule apply */
+    background-color: red;
+  }
+  .random-beer {
+    margin-top: 0px;
+  }
+  .random-beer .card img {
+    max-height: 70cqh;
+    max-width: 90cqw;
+    height: auto;
+  }
+  .button-92 {
+    font-size: 12cqw;
+  }
 }
