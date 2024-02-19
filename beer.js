@@ -32,7 +32,7 @@ class Beer {
     return `<div class="card">
             <img src="${url}" />
             <h2>${this.name}</h2>
-            <p>See more</p>
+            <p><a href="/info.html">See more</a></p>
           </div>`;
   }
 }
