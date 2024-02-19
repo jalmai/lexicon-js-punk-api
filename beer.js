@@ -23,6 +23,7 @@ class Beer {
     this.contributed_by = data.contributed_by;
   }
   beerHtmlCard() {
+    // TODO: If no image, insert placeholder
     return `<div class="card">
             <img src="${this.image_url}" />
             <h2>${this.name}</h2>
